@@ -5,6 +5,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 
+
+
 const app = express();
 const router = express.Router();
 
@@ -18,6 +20,8 @@ mongoose.connect(MONGODB_URI);
 app.use(bodyParser.json(),cors())
 
 app.use(require('../route/auth-router'));
+
+app.use(require('./models/User'));
 
 app.all('*', (request, response) => {
   console.log('Returning a 404 from the catch-all route');
