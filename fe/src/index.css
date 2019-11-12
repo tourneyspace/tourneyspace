@@ -30,7 +30,7 @@ p {
   margin: 0;
   font-size: 24px;
   line-height: 28px;
-  color: #333333;
+  color: #404040;
 }
 
 a {
@@ -69,9 +69,17 @@ a {
   background-color: #DCEFDC;
 }
 
+.green-container:hover {
+  background-color: #cbe7cb;
+}
+
 .red-container {
   color: #DC3938;
   background-color: #FCE9EA;
+}
+
+.red-container:hover {
+  background-color: #f9d2d4;
 }
 
 .yellow-container {
@@ -79,9 +87,17 @@ a {
   background-color: #FFF8E5;
 }
 
+.yellow-container:hover {
+  background-color: #fff1cc;
+}
+
 .blue-container {
   color: #6C63FF;
   background-color: #E7E6FF;
+}
+
+.blue-container:hover {
+  background-color: #ceccff;
 }
 
 ::selection {
