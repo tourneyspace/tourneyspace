@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Inventory() {
     return (
-        <React.Component>
+        <div>
             <div class="top">
                 <h1>
                     Hello World <i class="fas fa-basketball-ball"></i>
@@ -39,6 +39,6 @@ export default function Inventory() {
             <a href="#">
                 <i class="fas fa-chevron-left"></i> Back
             </a>
-        </React.Component>
+        </div>
     );
 }
