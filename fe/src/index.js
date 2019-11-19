@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 // import Inventory from './Components/Inventory/Inventory';
-import Login from './Components/Login/Login';
+// import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
 
 export default function Body() {
     return (
         <main>
-            <Login />
+            <Register />
         </main>
     );
 }
