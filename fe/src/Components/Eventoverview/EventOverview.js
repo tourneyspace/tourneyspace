@@ -14,16 +14,21 @@ class EventOverview extends React.Component {
                 <i className="fas fa-edit"></i>
             </button>
             <div className="flex-container">
-                <div id="schedule-container">1</div>
-                <div>
-                    <div id="team-container">2.1</div>
-                    <div id="court-container">2.2</div>
+                <div id="schedule-container">
+                    <h3>Schedule</h3>
+                </div>
+                <div id="conwrap">
+                    <div id="team-container">
+                        <h3>Teams</h3>
+                    </div>
+                    <div id="court-container">
+                        <h3>Courts</h3>
+                    </div>
                 </div>
             </div>
             <br/>
             <br/>
             <br/>
-
             <a href="#">
                 <i className="fas fa-chevron-left"></i> Back
             </a>
