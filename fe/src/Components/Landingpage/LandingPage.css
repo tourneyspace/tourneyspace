@@ -2,9 +2,9 @@ h1{
     margin: 0;
     text-align: left;
 }
-div{
-    width: 80%;
-    margin: auto;
+.empty{
+    width: 45%;
+    margin: 5vh auto auto;
 }
 img{
     display: block;
@@ -12,9 +12,6 @@ img{
     margin-right: auto;
     width: 100%;
 }
-
-.card{
-    width: 70vw;
-    height: 30vh;
-    background-color: red;
+.sports-container{
+    min-height: 50vh;
 }

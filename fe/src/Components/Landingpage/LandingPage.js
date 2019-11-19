@@ -5,29 +5,34 @@ import './LandingPage.css'
 class LandingPage extends React.Component {
     render() {
         let tourneys = Map;
+        //To try out the page just change the operator to != or ==
         if (tourneys == null){
             return <section>
                 <h1>Upcoming events</h1>
+                <button className="green-container btn">
+                    <span className="btn-text">Create</span>
+                    <i className="fas fa-plus-circle"></i>
+                </button>
                 <p>No upcoming events</p>
-                <div>
+                <div className="empty">
                     <img src={empty} alt={empty}/>
                 </div>
             </section>
         }else{
             return <section>
                 <h1>Upcoming events</h1>
-                <ul className="cards">
-                    <li className="cards_item">
-                        <div className="card">
-                            <div className="card_content">
-                                <h2 className="card_title">Card Grid Layout</h2>
-                                <p className="card_text">Demo of pixel perfect pure CSS simple responsive card grid
-                                    layout</p>
-                                <button className="btn card_btn">Read More</button>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                <button className="green-container btn">
+                    <span className="btn-text">Create</span>
+                    <i className="fas fa-plus-circle"></i>
+                </button>
+                <div className="container-example sports-container">
+                    <button className="blue-container btn">
+                        <i className="fas fa-chevron-right"></i>
+                    </button>
+                    <p>Date</p>
+                    <h2>The sport</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
             </section>
         }
     }

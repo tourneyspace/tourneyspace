@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 import Inventory from './Components/Inventory/Inventory';
+import LandingPage from "./Components/Landingpage/LandingPage";
 
 export default function Body() {
     return (
         <main>
-            <Inventory />
+            <LandingPage/>
         </main>
     );
 }
@@ -17,6 +18,6 @@ serviceWorker.unregister();
 // ========================================
 
 ReactDOM.render(
-    <Body />,
+    <Body/>,
     document.getElementById('root')
 );
