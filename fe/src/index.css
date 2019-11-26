@@ -105,6 +105,25 @@ a {
 	color: white;
 }
 
+.input-fields {
+  margin: 12% 0 12% 0;
+}
+
+.input-field {
+  margin: 15px 0 15px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 4px solid #E2E2E2;
+  font-size: 48px;
+  font-weight: bold;
+  color: #000000;
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: #000000;
+}
+
 @media screen and (max-width: 1200px) and (min-width: 0px) {
   .btn-text {
     display: none;
