@@ -43,7 +43,7 @@ export default function EditTournament(props) {
                         <span className="btn-text">Continue </span><i className="fas fa-chevron-right"></i>
                     </button>
 
-                    <Link to={`/landingpage`}><i className="fas fa-chevron-left"></i> Back</Link>
+                    <Link to={`/eventOverview`}><i className="fas fa-chevron-left"></i> Back</Link>
                 </div>
             </form>
         </div>

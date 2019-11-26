@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './EventOverview.css'
 import nodata from './no_data.png'
 
