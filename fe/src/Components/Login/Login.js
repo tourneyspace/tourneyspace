@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import History from '../../history';
 
 export default function Login() {
     //https://stackoverflow.com/questions/51115640/how-to-send-form-data-from-react-to-express
@@ -12,7 +13,7 @@ export default function Login() {
             alert("Not valid!");
         }
         else {
-            alert(`${username} logged in!`);
+            History.push('/landingpage')
         }
     }
 
@@ -30,10 +31,7 @@ export default function Login() {
                         <span className="btn-text">Login </span><i className="fas fa-chevron-right"></i>
                     </button>
 
-                    {/* <div>
-                        <NavLink to={`/inventory`}>Go</NavLink>
-                    </div> */}
-                    <a href="#">Register</a>
+                    <Link to={`/register`}>Register</Link>
                 </div>
             </form>
         </div>
