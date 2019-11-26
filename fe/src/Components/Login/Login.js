@@ -13,12 +13,13 @@ export default function Login() {
             alert("Not valid!");
         }
         else {
-            History.push('/landingpage')
+            History.push('/landingpage');
         }
     }
 
     return (
         <div>
+            
             <form onSubmit={handleSubmit}>
                 <div className="input-fields">
                     <input type="text" placeholder="Username" className="input-field" on  onChange={(e) => setUsername(e.target.value)} />
