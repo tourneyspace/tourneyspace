@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import './EventOverview.css'
+import Schedule from "./Schedule";
+import Teams from "./Teams"
+import Courts from "./Courts";
 
 class EventOverview extends React.Component {
     render() {
@@ -14,16 +17,10 @@ class EventOverview extends React.Component {
                 <i className="fas fa-edit"></i>
             </button>
             <div className="flex-container">
-                <div id="schedule-container">
-                    <h3>Schedule</h3>
-                </div>
+                <Schedule/>
                 <div id="conwrap">
-                    <div id="team-container">
-                        <h3>Teams</h3>
-                    </div>
-                    <div id="court-container">
-                        <h3>Courts</h3>
-                    </div>
+                    <Teams/>
+                    <Courts/>
                 </div>
             </div>
             <br/>
