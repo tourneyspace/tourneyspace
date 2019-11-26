@@ -10,6 +10,7 @@ import Register from './Components/Register/Register';
 import Landingpage from './Components/Landingpage/LandingPage';
 import CreateTournament from './Components/CreateTournament/CreateTournament';
 import CreateTeam from './Components/CreateTeam/CreateTeam';
+import EventOverview from "./Components/Eventoverview/EventOverview";
 
 export default function Body() {
     return (
@@ -21,6 +22,7 @@ export default function Body() {
                         <Route path='/landingpage' component={Landingpage} name="Landingpage" />  
                         <Route path='/createTournament' component={CreateTournament} name="CreateTournament" />
                         <Route path='/createTeam' component={CreateTeam} name="CreateTeam" />
+                        <Route path='/eventOverview' component={EventOverview} name="EventOverview" />
                         {/* must be on the last position */}
                         <Route path='/' component={Login} name="Login" />
                     </Switch>
