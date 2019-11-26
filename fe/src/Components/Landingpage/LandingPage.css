@@ -1,0 +1,17 @@
+h1{
+    margin: 0;
+    text-align: left;
+}
+.empty{
+    width: 45%;
+    margin: 5vh auto auto;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.sports-container{
+    min-height: 50vh;
+}

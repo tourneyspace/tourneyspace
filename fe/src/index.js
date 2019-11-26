@@ -2,16 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
-// import Inventory from './Components/Inventory/Inventory';
-// import Login from './Components/Login/Login';
-// import Register from './Components/Register/Register';
-// import CreateTournament from './Components/CreateTournament/CreateTournament';
-import CreateTeam from './Components/CreateTeam/CreateTeam';
+import Inventory from './Components/Inventory/Inventory';
+import LandingPage from "./Components/Landingpage/LandingPage";
 
 export default function Body() {
     return (
         <main>
-            <CreateTeam />
+            <LandingPage/>
         </main>
     );
 }
@@ -21,6 +18,6 @@ serviceWorker.unregister();
 // ========================================
 
 ReactDOM.render(
-    <Body />,
+    <Body/>,
     document.getElementById('root')
 );
