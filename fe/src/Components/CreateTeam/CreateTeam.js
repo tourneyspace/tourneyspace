@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import History from '../../history';
 
 export default function CreateTournament() {
     //https://stackoverflow.com/questions/51115640/how-to-send-form-data-from-react-to-express
@@ -10,7 +12,7 @@ export default function CreateTournament() {
             alert("Not valid!");
         }
         else {
-            alert(`${teamName} created!`);
+            History.push('/landingpage');
         }
     }
 
@@ -26,7 +28,7 @@ export default function CreateTournament() {
                         <span className="btn-text">Continue </span><i className="fas fa-chevron-right"></i>
                     </button>
 
-                    <a href="#"><i className="fas fa-chevron-left"></i> Back</a>
+                    <Link to={`/landingpage`}><i className="fas fa-chevron-left"></i> Back</Link>
                 </div>
             </form>
         </div>
