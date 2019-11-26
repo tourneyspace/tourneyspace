@@ -60,6 +60,10 @@ a {
   line-height: 40px;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .btn-text {
   padding-right: 5px;
 }
