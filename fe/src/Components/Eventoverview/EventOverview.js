@@ -4,7 +4,7 @@ import './EventOverview.css'
 import Schedule from "./Schedule";
 import Teams from "./Teams"
 import Courts from "./Courts";
-
+import axios from 'axios';
 class EventOverview extends React.Component {
     render() {
         return <section>
