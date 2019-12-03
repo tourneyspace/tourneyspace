@@ -12,7 +12,7 @@ const router = express.Router();
 
 // env variables
 const PORT = process.env.PORT || 3000;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/mern-starter';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://mongo:27017/expressmongo';
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
