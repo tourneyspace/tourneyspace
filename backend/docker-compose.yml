@@ -1,0 +1,15 @@
+version: '3'
+services:
+  tourneyspacedb:
+    image: mariadb
+    container_name: tourneyspace_db
+    restart: always
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=tourneyspace
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./tourneyspace.sql:/docker-entrypoint-initdb.d/tourneyspace.sql
