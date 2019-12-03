@@ -26,7 +26,6 @@ export default function Login() {
                     <br />
                     <input type="password" placeholder="Password" className="input-field" onChange={(e) => setPassword(e.target.value)} />
                 </div>
-                <p>test</p>
                 <div>
                     <button className="blue-container btn" type="submit">
                         <span className="btn-text">Login </span><i className="fas fa-chevron-right"></i>
