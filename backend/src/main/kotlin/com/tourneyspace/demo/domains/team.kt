@@ -4,6 +4,6 @@ data class Team(var name: String,
                 var players: String
 )
 
-interface ProductRepository {
+interface TeamRepository {
     fun getAllTeams(): List<Team>
 }

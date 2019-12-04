@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './EventOverview.css'
 import people from "./people-group.svg";
 import TeamDataService from "../../service/TeamDataService";
-import TEAM from "../../service/TeamDataService"
 
 class Teams extends React.Component {
     constructor(props) {
@@ -18,7 +17,7 @@ class Teams extends React.Component {
         this.refresh();
     }
     refresh() {
-        TeamDataService.retrieveAllTeams(TEAM)//HARDCODED
+        TeamDataService.retrieveAllTeams()//HARDCODED
             .then(
                 response => {
                     console.log(response);

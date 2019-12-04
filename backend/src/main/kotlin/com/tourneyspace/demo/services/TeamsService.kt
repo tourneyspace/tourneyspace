@@ -12,6 +12,7 @@ class TeamsService {
 
         init {
             teams.add(Team("Grizzlies", "Nilz"))
+            teams.add(Team("Coolteam", "Cris"))
         }
     }
     fun findAll(): List<Team> {
