@@ -17,7 +17,7 @@ class JooqTeamRepository(val jooq: DSLContext) : TeamRepository {
                 .set(TEAM.TEAMID, teamId)
                 .set(TEAM.NAME, teamToCreate.name)
                 .execute()
-                (jooq.selectFrom(TEAM).where(TEAM.TEAMID.eq(teamId)).fetchOne()).asTeam();
+        (jooq.selectFrom(TEAM).where(TEAM.TEAMID.eq(teamId)).fetchOne()).asTeam();
     }
 
     /**
@@ -38,6 +38,9 @@ class JooqTeamRepository(val jooq: DSLContext) : TeamRepository {
     private fun TeamRecord.asTeam(): Team =
             Team(teamid, name)
 
+    override fun deleteTeam(team: Team) {
+        jooq.executeDelete(team.asRecord())
+    }
     /**
      * This function converts a Product-Object to a ProductRecord
      */

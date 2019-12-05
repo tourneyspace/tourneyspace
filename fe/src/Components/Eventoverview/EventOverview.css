@@ -55,6 +55,7 @@ h3 {
 .people-icon {
     width: 10%;
     margin: 0;
+    display: inline-block;
 }
 
 .time {

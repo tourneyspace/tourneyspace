@@ -7,13 +7,13 @@ FLUSH PRIVILEGES;
 
 CREATE TABLE IF NOT EXISTS `Team`
 (
-    `teamId`  varchar(40) NOT NULL,
+    `teamId`  varchar(40) NOT NULL PRIMARY KEY ,
     `name`    varchar(50) NOT NULL
 ) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `Tourney`
 (
-    `tourneyId`  varchar(40)   NOT NULL,
+    `tourneyId`  varchar(40)   NOT NULL PRIMARY KEY,
     `location`   varchar(30)   NOT NULL,
     `image`      varchar(50)   NOT NULL,
     `date`       date          NOT NULL,

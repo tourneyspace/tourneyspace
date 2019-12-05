@@ -9,4 +9,5 @@ interface TeamRepository {
     fun getAllTeams(): List<Team>
     fun findByTeamId(teamId: String): Team
     fun createTeam(teamToCreate: Team)
+    fun deleteTeam(team: Team)
 }

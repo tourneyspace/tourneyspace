@@ -1,42 +1,44 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './EventOverview.css'
 import people from "./people-group.svg";
 import TeamDataService from "../../service/TeamDataService";
+import History from "../../history";
 
 class Teams extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
             teams: [],
             message: null
         };
-        this.refresh = this.refresh.bind(this)
-    }
+        this.refreshTeams = this.refreshTeams.bind(this);
+    };
     componentDidMount() {
-        this.refresh();
+        this.refreshTeams();
     }
-    refresh() {
-        TeamDataService.retrieveAllTeams()//HARDCODED
+
+    deleteTeamClicked(id) {
+        TeamDataService.deleteTeam(id)
             .then(
                 response => {
-                    console.log(response);
-                    this.setState({ teams: response.data })
+                    this.setState({ message: `Delete of course ${id} Successful` })
+                    this.refreshTeams()
                 }
             )
     }
+
+    refreshTeams() {
+        TeamDataService.retrieveAllTeams()
+            .then(
+                response => {
+                    this.setState({teams: response.data});
+                }
+            )
+    }
+
     render() {
-        let x = 0;
-        if (x === 1) {
-            return <div id="team-container">
-                <Link to={`/CreateTeam`}>
-                    <button className="green-container btn">
-                        <i className="fas fa-plus-circle"></i>
-                    </button>
-                </Link>
-                <h3>Teams</h3>
-            </div>
-        }
         return <div id="team-container">
             <Link to={`/CreateTeam`}>
                 <button className="green-container btn">
@@ -49,8 +51,11 @@ class Teams extends React.Component {
                     this.state.teams.map(
                         team =>
                             <li className="list-item container-example">
-                                <img className="people-icon" src={people} alt="people" />
-                                <p>{team.name}</p>
+                                <img className="people-icon" src={people} alt="people"/>
+                                <p style={{display: "inline-block"}}>{team.name}</p>
+                                    <button className="red-container btn" onClick={() => this.deleteTeamClicked(team.teamId)}>
+                                        <span className="btn-text">-</span>
+                                    </button>
                             </li>
                     )
                 }
