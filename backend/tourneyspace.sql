@@ -5,37 +5,22 @@ USE tourneyspace;
 GRANT ALL PRIVILEGES ON *.* TO 'user' IDENTIFIED BY 'user';
 FLUSH PRIVILEGES;
 
-CREATE TABLE IF NOT EXISTS `Product`
+CREATE TABLE IF NOT EXISTS `Team`
 (
-    `productId`          varchar(40)  NOT NULL,
-    `productType`        varchar(50)  NOT NULL,
-    `productName`        varchar(50)  NOT NULL PRIMARY KEY,
-    `productDescription` varchar(500) NOT NULL,
-    `bikeSpeed`          DOUBLE(10, 1),
-    `bikeComfort`        DOUBLE(10, 1),
-    `bikeAgility`        DOUBLE(10, 1)
+    `teamId`  varchar(40) NOT NULL,
+    `name`    varchar(50) NOT NULL,
+    `players` varchar(50) NOT NULL
 ) DEFAULT CHARSET = utf8;
 
-create table if not exists users
+CREATE TABLE IF NOT EXISTS `Tourney`
 (
-
-    username              varchar(50)                       not null primary key,
-    userId                char(36)                          not null,
-    email                 varchar(30)                       not null,
-    firstName             varchar(20)                       not null,
-    lastName              varchar(25)                       not null,
-    password              varchar(100)                      not null,
-    enabled               boolean                           not null,
-    role                  varchar(15) default ('USER') not null,
-    accountNonExpired     boolean     default false         not null,
-    credentialsNonExpired boolean     default false         not null,
-    accountNonLocked      boolean     default false         not null
-
-);
-create table if not exists authorities
-(
-    username  varchar(50) not null,
-    authority varchar(50) not null,
-    constraint fk_authorities_users foreign key (username) references users (username)
-);
-create unique index ix_auth_username on authorities (username, authority);
+    `tourneyId`  varchar(40)   NOT NULL,
+    `location`   varchar(30)   NOT NULL,
+    `image`      varchar(50)   NOT NULL,
+    `date`       date          NOT NULL,
+    `teams`      varchar(100)  NOT NULL,
+    `courts`     integer       NOT NULL,
+    `startTime`  date          NOT NULL,
+    `pause`      date          NOT NULL,
+    `gameLength` double(10, 1) NOT NULL
+) DEFAULT CHARSET = utf8;
