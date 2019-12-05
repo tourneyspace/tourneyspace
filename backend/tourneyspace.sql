@@ -8,8 +8,7 @@ FLUSH PRIVILEGES;
 CREATE TABLE IF NOT EXISTS `Team`
 (
     `teamId`  varchar(40) NOT NULL,
-    `name`    varchar(50) NOT NULL,
-    `players` varchar(50) NOT NULL
+    `name`    varchar(50) NOT NULL
 ) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `Tourney`

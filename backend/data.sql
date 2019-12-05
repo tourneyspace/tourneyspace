@@ -1,0 +1,1 @@
+INSERT INTO Team (teamId, name) VALUES ('test-hash-stuff-1212', 'Pandas');
