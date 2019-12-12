@@ -1,0 +1,6 @@
+/register?          /register
+/landingpage?       /landingpage
+/createTournament?  /createTournament
+/editTournament?    /editTournament
+/createTeam?        /createTeam
+/eventOverview?      /eventOverview
