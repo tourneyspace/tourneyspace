@@ -1,5 +1,6 @@
 package com.tourneyspace.demo.domains
 
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 data class Tourney(var name: String,
@@ -8,11 +9,12 @@ data class Tourney(var name: String,
                    var date: Date,
                    var teams: List<String>,
                    var courts: Int,
-                   var startTime: Date,
-                   var pause : Date,
-                   var gamelength: Double
+                   var startTime: DateTimeFormatter? = DateTimeFormatter.ofPattern("HH:mm"),
+                   var pause : DateTimeFormatter? = DateTimeFormatter.ofPattern("HH:mm"),
+                   var gamelength: DateTimeFormatter? = DateTimeFormatter.ofPattern("HH:mm")
 )
 
 interface TourneyRepository {
     fun getAllTourneys(): List<Tourney>
+    fun createTourney(tourneyToCreate: Tourney)
 }

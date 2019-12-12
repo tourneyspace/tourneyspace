@@ -19,10 +19,9 @@ class TeamController(private val teamRepository: TeamRepository) {
         teamRepository.createTeam(team)
     }
 
-    @DeleteMapping("/deleteTeam/{id}")
+    @PostMapping("/deleteTeam/{id}")
     fun deleteTeam(@PathVariable id: String, @PathVariable name: String) {
         val team = teamRepository.findByTeamId(id)
-        println(team)
         teamRepository.deleteTeam(team)
     }
 }

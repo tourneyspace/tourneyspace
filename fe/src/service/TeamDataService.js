@@ -14,7 +14,7 @@ class TeamDataService {
 
     deleteTeam(teamId){
         console.log(`Team with id: ${teamId} was deleted`);
-        return axios.delete(`${REST_API_URL}/deleteTeam/${teamId}`)
+        return axios.post(`${REST_API_URL}/deleteTeam/${teamId}`)
     }
 }
 export default new TeamDataService()
