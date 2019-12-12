@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 docker-compose -f backend/docker-compose.yml up -d --build
-mvn -f backend/pom.xml clean package -U
-mvn -f backend spring-boot:run
+./mvnw -f backend/pom.xml clean package -U
+./mvnw -f backend spring-boot:run -d
 npm run start
 
