@@ -22,7 +22,6 @@ class Teams extends React.Component {
         TeamDataService.deleteTeam(id)
             .then(
                 response => {
-                    this.setState({ teams: response.data });
                     this.refreshTeams()
                 }
             )
