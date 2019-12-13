@@ -17,4 +17,6 @@ data class Tourney(var name: String,
 interface TourneyRepository {
     fun getAllTourneys(): List<Tourney>
     fun createTourney(tourneyToCreate: Tourney)
+    fun deleteTourney(tourney: Tourney)
+    fun findByTourneyId(tourney: Tourney)
 }

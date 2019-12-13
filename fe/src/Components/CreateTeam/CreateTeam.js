@@ -13,9 +13,9 @@ export default function CreateTournament() {
             alert("Not valid!");
         }
         else {
-            History.push('/eventOverview');
+            History.push('/landingPage');
             TeamDataService.createTeam(teamName)
-                .then(() => this.props.history.push('/landingPage'))
+                .then(() => this.props.history.push('/landingPage'));
             console.log(teamName)
         }
     };

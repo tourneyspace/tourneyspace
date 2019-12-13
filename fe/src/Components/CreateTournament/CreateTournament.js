@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import History from '../../history';
+import TeamDataService from "../../service/TeamDataService";
 
 export default function CreateTournament() {
     //https://stackoverflow.com/questions/51115640/how-to-send-form-data-from-react-to-express
@@ -17,6 +18,9 @@ export default function CreateTournament() {
         }
         else {
             History.push('/landingpage');
+            TeamDataService.createTournament(eventName, startTime, breakTime, gameLength, courts)
+                .then(() => this.props.history.push('/landingPage'));
+            console.log("Tournament created")
         }
     }
 

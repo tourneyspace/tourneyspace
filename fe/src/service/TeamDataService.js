@@ -16,5 +16,10 @@ class TeamDataService {
         console.log(`Team with id: ${teamId} was deleted`);
         return axios.post(`${REST_API_URL}/deleteTeam/${teamId}`)
     }
+    createTournament(eventName, startTime, breakTime, gameLength, courts){
+        console.log(`Tournament: ${eventName} was created`);
+        return axios.post(`${REST_API_URL}/createTournament/`)
+
+    }
 }
 export default new TeamDataService()
