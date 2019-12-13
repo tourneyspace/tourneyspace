@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import './EventOverview.css'
 import people from "./people-group.svg";
 import TeamDataService from "../../service/TeamDataService";
-import History from "../../history";
 
 class Teams extends React.Component {
 
