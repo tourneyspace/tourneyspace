@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './EventOverview.css'
 import people from "./people-group.svg";
-import TeamDataService from "../../service/TeamDataService";
+import TeamDataService from "../../service/DataService";
 
 class Teams extends React.Component {
 

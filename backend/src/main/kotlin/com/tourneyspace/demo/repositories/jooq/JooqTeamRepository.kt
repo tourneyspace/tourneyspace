@@ -20,6 +20,10 @@ class JooqTeamRepository(val jooq: DSLContext) : TeamRepository {
         (jooq.selectFrom(TEAM).where(TEAM.TEAMID.eq(teamId)).fetchOne()).asTeam();
     }
 
+    override fun deleteTeam(team: Team) {
+        jooq.executeDelete(team.asRecord())
+    }
+
     /**
      * This function selects all products from the product-table
      */
@@ -38,9 +42,6 @@ class JooqTeamRepository(val jooq: DSLContext) : TeamRepository {
     private fun TeamRecord.asTeam(): Team =
             Team(teamid, name)
 
-    override fun deleteTeam(team: Team) {
-        jooq.executeDelete(team.asRecord())
-    }
     /**
      * This function converts a Product-Object to a ProductRecord
      */

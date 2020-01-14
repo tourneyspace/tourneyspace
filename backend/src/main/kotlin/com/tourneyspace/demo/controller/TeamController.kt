@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*
 class TeamController(private val teamRepository: TeamRepository) {
 
     @GetMapping("/teams")
-    fun getAllCourses(): List<Team?>? {
+    fun getAllTeams(): List<Team?>? {
         return (teamRepository.getAllTeams())
     }
 
@@ -19,7 +19,7 @@ class TeamController(private val teamRepository: TeamRepository) {
         teamRepository.createTeam(team)
     }
 
-    @PostMapping("/deleteTeam/{id}")
+    @DeleteMapping("/deleteTeam/{id}")
     fun deleteTeam(@PathVariable id: String) {
         val team = teamRepository.findByTeamId(id)
         teamRepository.deleteTeam(team)

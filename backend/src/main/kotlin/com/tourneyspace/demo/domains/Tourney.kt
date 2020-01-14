@@ -1,22 +1,21 @@
 package com.tourneyspace.demo.domains
 
-import java.time.format.DateTimeFormatter
-import java.util.*
-
-data class Tourney(var name: String,
-                   var location: String,
-                   var image: String,
-                   var date: Date,
-                   var teams: List<String>,
-                   var courts: Int,
-                   var startTime: DateTimeFormatter? = DateTimeFormatter.ofPattern("HH:mm"),
-                   var pause : DateTimeFormatter? = DateTimeFormatter.ofPattern("HH:mm"),
-                   var gamelength: DateTimeFormatter? = DateTimeFormatter.ofPattern("HH:mm")
+data class Tourney(
+        var tourneyId: String,
+        var name: String,
+        var location: String,
+        var image: String,
+        var date: String,
+        var teams: String,
+        var courts: Int,
+        var startTime: String,
+        var pause: String,
+        var gamelength: Double
 )
 
 interface TourneyRepository {
     fun getAllTourneys(): List<Tourney>
     fun createTourney(tourneyToCreate: Tourney)
     fun deleteTourney(tourney: Tourney)
-    fun findByTourneyId(tourney: Tourney)
+    fun findByTourneyId(tourneyId: String) : Tourney
 }

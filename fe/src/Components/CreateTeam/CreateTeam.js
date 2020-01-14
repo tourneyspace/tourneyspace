@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import History from '../../history';
-import TeamDataService from "../../service/TeamDataService";
+import TeamDataService from "../../service/DataService";
 
 export default function CreateTournament() {
     //https://stackoverflow.com/questions/51115640/how-to-send-form-data-from-react-to-express
